@@ -11,7 +11,7 @@ F = (-n/2:(n/2)-1).*Fs/n;
 y = fft(r);
 subplot(212); 
 plot(F, fftshift(abs(y)), 'color', 'black');
-xlabel('Frequency'); ylabel('Amplitude'); 
+xlabel('Frequency'); ylabel('Magnitude'); 
 title('Frequency domain plot of audio signal')
 
 
