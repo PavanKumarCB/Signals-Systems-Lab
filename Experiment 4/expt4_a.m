@@ -15,7 +15,7 @@ subplot(222); stem(X_ph)
 
 % IDFT
 Y = zeros(1, N);
-for k=1:n
+for k=1:N
     for n=1:N
         Y(k) = Y(k) + (1/N).*X(n).*exp((1j.*2.*pi.*(n-1).*(k-1)./N));
     end
