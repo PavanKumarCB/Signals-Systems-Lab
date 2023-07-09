@@ -1,10 +1,14 @@
-clc; close all; clear all;
-t = 0:10;
-r1 = t+2;
-r2 = t+1;
-r3 = t-2;
-r4 = t-3;
-y = r1-r2-r3+r4;
-stem(t,y,'filled', Color='black'); grid on
-xlabel('time'); ylabel('amplitude'); 
-title('Experiment 2 Practice problem 1')
+t = -5:0.01:5; 
+signal = ramp(t + 2) - ramp(t + 1) - ramp(t - 2) + ramp(t - 3);
+
+plot(t, signal, 'LineWidth', 2, 'color', 'black');
+xlabel('Time');
+ylabel('Amplitude');
+title('Plot of the Signal r(t+2)-r(t+1)-r(t-2)+r(t-3)');
+grid on;
+
+function y = ramp(t)
+    y = t .* (t >= 0);
+end
+
+
